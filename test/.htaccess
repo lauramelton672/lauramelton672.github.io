@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Password:"
+AuthUserFile /toaster/f/l/flyer/public_html/test/.htpasswd 
+Require valid-user

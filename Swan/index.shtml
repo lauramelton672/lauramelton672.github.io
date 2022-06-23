@@ -1,0 +1,9 @@
+<html>
+<head>
+<title>My SHTML Title</title>
+<body>
+<!--#echo var="DATE_LOCAL" -->
+<hr>
+<!--#include virtual="./cgi-bin/test.CGI" -->
+</body>
+</html>

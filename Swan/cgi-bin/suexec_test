@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+print "Content-type:text/html\n\n";
+print "<pre>";
+print "Hello, World";
+print "</pre>";
+#exec ("pwd");
+open(FH, '<', "/home/chroot/toaster/b/i/bizarre/public_html/counter.txt");
+while ($buf = <FH>) {
+	print $buf;
+	$oldbuf = $buf;
+	#chop $buf;
+}
+close(FH);
+print 'Oldbuf: '.$oldbuf."\n";
+$newbuf = $oldbuf + 1;
+print 'Newbuf: '.$newbuf."\n";
+open(OFH, '>', "/home/chroot/toaster/b/i/bizarre/public_html/counter.txt");
+print OFH $newbuf;
+close(OFH);
